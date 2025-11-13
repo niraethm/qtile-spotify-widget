@@ -108,7 +108,7 @@ class Spotify(base.ThreadPoolText):
     def poll(self) -> str: # type: ignore
         """Poll content for the text box"""
         vars = {
-            "icon": self.pause_icon if self.playing else self.play_icon,
+            "icon": self.play_icon if self.playing else self.pause_icon,
             "artist": self.artist,
             "track": self.song_title,
             "album": self.album,
